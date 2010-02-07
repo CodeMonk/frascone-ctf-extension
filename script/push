@@ -29,10 +29,10 @@ def hg(args)
 end
 
 # For google code
-GOOGLE_SERVER='ctf-extension.googlecode.com'
-GOOGLE_PATH='/hg/'
 USER = ARGV[1]
 PASSWD = ARGV[2]
+GOOGLE_SERVER=ARGV[3]
+GOOGLE_PATH='/hg/'
 DEST_GOOGLE='https://'+USER+':'+PASSWD+'@'+GOOGLE_SERVER+GOOGLE_PATH
 
 ci = ['commit','-m']+[ARGV[0]]

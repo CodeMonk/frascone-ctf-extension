@@ -22,6 +22,7 @@ DEFALUT_CRX= './'+'ctf-extension-latest-version.crx'
 
 #Default message for hg
 DEFALUT_MSG = 'Format the sources'
+GOOGLE_SERVER='ctf-extension.googlecode.com'
 SCRIPT='script/'
 require SCRIPT+'crxmake'
 
@@ -35,7 +36,7 @@ task :ci,:msg do |t,args|
   args.with_defaults(:msg => DEFALUT_MSG)
   confirm('Commit with message: '+args.msg) if DEFALUT_MSG==args.msg
   # Push source
-  sh PUSH,args.msg,USER,PASSWD
+  sh PUSH,args.msg,USER,PASSWD, GOOGLE_SERVER
 end
 
 desc 'Upload the last version of extension'
