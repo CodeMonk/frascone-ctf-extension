@@ -1,0 +1,31 @@
+<div id='header'>
+  <div class='title'>
+    ${title}
+  </div>
+  <div class='time'>
+    ${time}
+  </div>
+  <div class='end'></div>
+  <div class='summary'>
+    <ul>
+      {for entry in summaries}
+      <li>${entry.msg} <span class='tip'>${entry.tip}</span></li>
+      {/for}
+    </ul>
+  </div>
+</div>
+<div id='body'>
+  <div class='detail'>
+    <ul>
+      {for entry in details}
+      <li>${entry.msg} </li>
+      <div class='tag'>
+        ${entry.tag}
+      </div>
+      {forelse}
+      <li class='tip'>${emptyMsg}</li>
+      {/for}
+    </ul>
+  </div>
+</div>
+

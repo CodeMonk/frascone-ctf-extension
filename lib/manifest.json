@@ -14,7 +14,7 @@
     "matches": ["file:///*", "http://*/*", "https://*/*" ],
     "run_at": "document_start",
     "all_frames": false,
-    "css": [ "cterminal.css" ],
+    "css": [ "css/cterminal.css", "css/preview.css" ],
     "js": [ "jquery.js","trimpath-template.js","ctframework.js", "commands/google-tools.js"]
   }],
   "permissions": [

@@ -1,0 +1,77 @@
+#chrome_terminal #preview #header{
+  padding: 0;
+  margin: 5px;
+}
+
+#chrome_terminal #preview .title{
+  padding: 0;
+  margin: 0;
+  float: left;
+
+  font-size: 20px;
+  color: #ffffff;
+  font-family: "Times New Roman", Times, serif;
+}
+
+#chrome_terminal #preview .time{
+  padding: 0;
+  margin: 0;
+  float: right;
+
+  font-size: 14px;
+  color: #b0b6b2;
+  font-family: "Times New Roman", Times, serif;
+}
+
+#chrome_terminal #preview .summary ul{
+  padding: 0 0 0 2em;
+  margin: 0;
+
+  font-size: 17px;
+  color: #ffffff;
+  font-family: "Times New Roman", Times, serif;
+
+  list-style: none;
+  text-indent: -1em;
+}
+
+#chrome_terminal #preview #body{
+  padding: 0;
+  margin: 3px;
+}
+
+#chrome_terminal #preview .detail ul{
+  padding: 0 0 0 3em;
+  margin: 0;
+
+  font-size: 15px;
+  color: #ffffff;
+  font-family: "Times New Roman", Times, serif;
+
+  list-style: none;
+  text-indent: -1em;
+}
+
+#chrome_terminal #preview .detail ul li:before {
+  content: "\00BB \0020";
+}
+
+#chrome_terminal #preview .tip{
+  font-size: 16px;
+  color: #ffffff;
+  font-family: "Times New Roman", Times, serif;
+  text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F, 0 0 0.2em #87F;
+}
+
+#chrome_terminal #preview .tag{
+  font-size: 11px;
+  color: #ffffff;
+  font-family: "Times New Roman", Times, serif;
+  text-shadow: #bebebe 0.2em 0.2em 0.4em;
+  text-indent: 3em;
+}
+
+#chrome_terminal #preview .end{
+  clear: both;
+}
+
