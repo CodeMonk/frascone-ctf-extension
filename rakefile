@@ -9,9 +9,9 @@ require 'fileutils'
 require 'yaml'
 
 def confirm(msg)
-    print msg+'[y/n]?'
-    f = gets
-    exit unless /y(es)?/i=~f
+  puts msg+'[y/n]?'
+  f = STDIN.gets
+  exit unless /y(es)?/i=~f
 end
 
 CONF= YAML.load_file('.auths.yml')
@@ -35,8 +35,11 @@ task :ci,:msg do |t,args|
   args.with_defaults(:msg => DEFALUT_MSG)
   confirm('Commit with message: '+args.msg) if DEFALUT_MSG==args.msg
   # Push source
-  sh PUSH,'"'+args.msg+'"',USER,PASSWD
+  sh PUSH,args.msg,USER,PASSWD
+end
 
+desc 'Upload the last version of extension'
+task :upload do
   confirm('Upload the crx file')
   # Packaging the crx
   CrxMake.make(
