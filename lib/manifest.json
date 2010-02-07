@@ -1,0 +1,26 @@
+{
+  "author": "Wang Pengcheng",
+  "email": "wpc0000@gmail.com",
+  "years": "2003-2010",
+  "name": "Chrome Terminal",
+  "version": "0.2.3",
+  "description": "Chrome command line",
+  "icons": {
+    "48":"icons/icon48x48.png",
+    "128":"icons/icon128x128.png"
+    },
+  "background_page": "backengine.html",
+  "content_scripts": [{
+    "matches": ["file:///*", "http://*/*", "https://*/*" ],
+    "run_at": "document_start",
+    "all_frames": false,
+    "css": [ "cterminal.css" ],
+    "js": [ "jquery.js","trimpath-template.js","ctframework.js", "commands/google-tools.js"]
+  }],
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ]
+}
+

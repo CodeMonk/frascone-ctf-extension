@@ -1,0 +1,65 @@
+#chrome_terminal{
+  z-index: 30000;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 75%;
+
+  border-top: 15px solid #bebebe;
+  border-bottom: 15px solid #bebebe;
+  border-left: 10px solid #bebebe;
+  border-right: 10px solid #bebebe;
+
+  position: fixed;
+  background-color: #333333;
+}
+
+#chrome_terminal #form {
+  z-index: 30001;
+  width: 100%;
+  height:38px;
+  margin:0;
+  padding:0;
+
+  position: relative;
+}
+
+#chrome_terminal #form form{
+  margin:0;
+  padding:0;
+}
+
+#chrome_terminal #form form input{
+  border:none;
+  width: 100%;
+  height: 38px;
+  margin:0;
+  padding:0;
+
+  font-size: 32px;
+  color: #000000;
+  font-family: "Times New Roman", Times, serif;
+
+  background-color: #5e5e5e;
+}
+
+#chrome_terminal #preview{
+  z-index: 30001;
+  width: 100%
+  height: auto;
+  border:none;
+  margin:0;
+  padding:0;
+
+  overflow:auto;
+
+  font-size: 18px;
+  color: #ffffff;
+  font-family: "Times New Roman", Times, serif;
+
+  position:relative;
+  background-color: #333333;
+}
+

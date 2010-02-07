@@ -1,0 +1,7 @@
+<ul style='list-style-type:none;'>
+{for label in labels}
+<li>${label['name']}: ${label['count']}</li>
+{forelse}
+<p>No new item.</p>
+{/for}
+</ul>

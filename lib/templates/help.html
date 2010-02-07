@@ -1,0 +1,7 @@
+<ul>
+{for command in commands}
+<li>${command.key}: ${command.description}</li>
+{forelse}
+<p>No commands.</p>
+{/for}
+</ul>

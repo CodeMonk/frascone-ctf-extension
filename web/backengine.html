@@ -1,0 +1,31 @@
+<!-- The Chrome Framework background Engine -->
+<html>
+<head>
+  <link rel="stylesheet" href="../lib/cterminal.css" type="text/css"/>
+
+  <script language="javascript" type="text/javascript" >
+    if(chrome==undefined)
+      chrome = {};
+    if(chrome.extension==undefined){
+      chrome.extension = {
+getURL: function(filename)
+        {
+          return '../lib/'+filename;
+        },
+sendRequest: function(request, callback)
+             {
+               CTEngine.listener(request, undefined, callback);
+             }
+      };
+    }
+  </script>
+  <script language="javascript" type="text/javascript" src='../lib/backengine.js'></script>
+  <script language="javascript" type="text/javascript" src='../lib/jquery.js'></script>
+  <script language="javascript" type="text/javascript" src='../lib/trimpath-template.js'></script>
+  <script language="javascript" type="text/javascript" src='../lib/ctframework.js'></script>
+  <script language="javascript" type="text/javascript" src='../lib/commands/google-tools.js'></script>
+</head>
+<body>
+</body>
+</html>
+
