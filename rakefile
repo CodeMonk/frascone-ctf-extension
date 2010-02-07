@@ -40,8 +40,8 @@ task :ci,:msg do |t,args|
 end
 
 desc 'Upload the last version of extension'
-task :upload do
-  confirm('Upload the crx file')
+task :new do
+  confirm('Upload the crx file, please Deprecated it,http://code.google.com/p/ctf-extension/downloads/delete?name=ctf-extension-latest-version.crx ')
   # Packaging the crx
   CrxMake.make(
     :ex_dir => "./lib",
