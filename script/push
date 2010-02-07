@@ -1,9 +1,9 @@
 #! /usr/local/bin/ruby
-
-require 'yaml'
+$KCODE = 'utf8'
 require 'net/http'
 require 'net/https'
 
+# Check the server
 def link_https?(server,path, username, password)
   http = Net::HTTP.new(server,443)
   req = Net::HTTP::Get.new(path)
@@ -18,20 +18,6 @@ def link_https?(server,path, username, password)
   end
 end
 
-# For google code
-GOOGLE_SERVER='ctf-extension.googlecode.com'
-GOOGLE_PATH='/hg/'
-CONF= YAML.load_file('.auths.yml')
-USER = CONF['user']
-PASSWD = CONF['passwd']
-DEST_GOOGLE='https://'+USER+':'+PASSWD+'@'+GOOGLE_SERVER+GOOGLE_PATH
-
-if ARGV.size < 1 then
-  puts 'Please press the message and other parameters.'
-  puts './push msg [args]'
-  exit
-end
-
 # run hg *args
 def hg(args)
   targs=['hg']
@@ -42,7 +28,14 @@ def hg(args)
   system cmd
 end
 
-ci = ['commit','-m']+ARGV
+# For google code
+GOOGLE_SERVER='ctf-extension.googlecode.com'
+GOOGLE_PATH='/hg/'
+USER = ARGV[1]
+PASSWD = ARGV[2]
+DEST_GOOGLE='https://'+USER+':'+PASSWD+'@'+GOOGLE_SERVER+GOOGLE_PATH
+
+ci = ['commit','-m']+[ARGV[0]]
 hg ci
 
 # push to google code
