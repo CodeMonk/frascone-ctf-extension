@@ -44,6 +44,7 @@ task :ci,:msg do |t,args|
 
   # Upload the lastest version crx
   sh UPLOAD, '--user='+USER, '--password='+PASSWD,
+    '--project=ctf-extension',
     '--summary='+DEFALUT_SUM_LASTEST, '--labels=OpSys-All,Type-Extension',
     DEFALUT_CRX
 end
