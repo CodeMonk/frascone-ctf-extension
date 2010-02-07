@@ -1,0 +1,8 @@
+#!/usr/local/bin/ruby
+# Copyright (C) 2003-2010 Wang Pengcheng <wpc0000@gmail.com>
+# , released under the MIT license
+# You may obtain a template of the MIT License at
+# http://www.opensource.org/licenses/mit-license.php
+$KCODE = 'utf8'
+
+system 'rake','ci["'+ARGV.join(' ')+'"]'

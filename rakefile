@@ -5,7 +5,15 @@
 # http://www.opensource.org/licenses/mit-license.php
 $KCODE = 'utf8'
 
+require 'fileutils'
 require 'yaml'
+
+def confirm(msg)
+    print msg+'[y/n]?'
+    f = gets
+    exit unless /y(es)?/i=~f
+end
+
 CONF= YAML.load_file('.auths.yml')
 USER = CONF['user']
 PASSWD = CONF['passwd']
@@ -25,15 +33,11 @@ task :default => :ci
 desc 'Commit sources'
 task :ci,:msg do |t,args|
   args.with_defaults(:msg => DEFALUT_MSG)
-  if DEFALUT_MSG==args.msg
-    p args.msg
-    print 'Commit with message: '+args.msg+'[y/n]?'
-    f = gets
-    exit unless /y(es)?/i=~f
-  end
+  confirm('Commit with message: '+args.msg) if DEFALUT_MSG==args.msg
   # Push source
   sh PUSH,'"'+args.msg+'"',USER,PASSWD
 
+  confirm('Upload the crx file')
   # Packaging the crx
   CrxMake.make(
     :ex_dir => "./lib",
@@ -47,5 +51,6 @@ task :ci,:msg do |t,args|
     '--project=ctf-extension',
     '--summary='+DEFALUT_SUM_LASTEST, '--labels=OpSys-All,Type-Extension',
     DEFALUT_CRX
+  FileUtils.rm DEFALUT_CRX
 end
 
