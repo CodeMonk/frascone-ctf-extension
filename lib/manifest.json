@@ -9,6 +9,7 @@
     "48":"icons/icon48x48.png",
     "128":"icons/icon128x128.png"
     },
+  "update_url": "http://ctf-extension.googlecode.com/files/updates.xml",
   "background_page": "backengine.html",
   "content_scripts": [{
     "matches": ["file:///*", "http://*/*", "https://*/*" ],
