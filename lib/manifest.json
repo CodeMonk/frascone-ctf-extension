@@ -15,10 +15,11 @@
     "run_at": "document_start",
     "all_frames": false,
     "css": [ "css/cterminal.css", "css/preview.css" ],
-    "js": [ "jquery.js","trimpath-template.js","ctframework.js", "commands/google-tools.js"]
+    "js": [ "jquery.js","trimpath-template.js","ctframework.js", "commands/google-tools.js", "commands/utils.js"]
   }],
   "permissions": [
     "tabs",
+    "bookmarks",
     "http://*/*",
     "https://*/*"
   ]
