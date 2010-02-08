@@ -1,77 +1,131 @@
-#chrome_terminal #preview #header{
+#chrome_terminal #preview .ctfxheader{
   padding: 0;
   margin: 5px;
+  background-color: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-style:inherit;
+  font-weight:inherit;
+  overflow: hidden;
 }
 
-#chrome_terminal #preview .title{
+#chrome_terminal #preview .ctfxtitle{
   padding: 0;
   margin: 0;
   float: left;
 
   font-size: 20px;
-  color: #ffffff;
-  font-family: "Times New Roman", Times, serif;
+  color: inherit;
+  font-family: inherit;
+  font-style:inherit;
+  font-weight:inherit;
 }
 
-#chrome_terminal #preview .time{
+#chrome_terminal #preview .ctfxtime{
   padding: 0;
   margin: 0;
   float: right;
 
   font-size: 14px;
   color: #b0b6b2;
-  font-family: "Times New Roman", Times, serif;
+  font-family: inherit;
+  font-style:inherit;
+  font-weight:inherit;
 }
 
-#chrome_terminal #preview .summary ul{
+#chrome_terminal #preview .ctfxsummary{
+  color: inherit;
+  font-family: inherit;
+  font-style:inherit;
+  font-weight:inherit;
+}
+
+#chrome_terminal #preview .ctfxsummary ul{
   padding: 0 0 0 2em;
   margin: 0;
-
-  font-size: 17px;
-  color: #ffffff;
-  font-family: "Times New Roman", Times, serif;
+  color: inherit;
+  font-family: inherit;
+  font-style:inherit;
+  font-weight:inherit;
 
   list-style: none;
   text-indent: -1em;
 }
 
-#chrome_terminal #preview #body{
+#chrome_terminal #preview .ctfxsummary ul li{
+  font-size: 17px;
+
+  color: inherit;
+  font-family: inherit;
+  font-style:inherit;
+  font-weight:inherit;
+}
+
+#chrome_terminal #preview .ctfxbody{
   padding: 0;
   margin: 3px;
+
+  color: inherit;
+  font-family: inherit;
+  font-style:inherit;
+  font-weight:inherit;
+  float: none;
 }
 
-#chrome_terminal #preview .detail ul{
+#chrome_terminal #preview .ctfxdetail{
+  color: inherit;
+  font-family: inherit;
+  font-style:inherit;
+  font-weight:inherit;
+}
+
+#chrome_terminal #preview .ctfxdetail ul{
   padding: 0 0 0 3em;
   margin: 0;
-
-  font-size: 15px;
-  color: #ffffff;
-  font-family: "Times New Roman", Times, serif;
+  color: inherit;
+  font-family: inherit;
+  font-style:inherit;
+  font-weight:inherit;
 
   list-style: none;
   text-indent: -1em;
 }
 
-#chrome_terminal #preview .detail ul li:before {
+#chrome_terminal #preview .ctfxdetail ul li{
+  font-size: 15px;
+  color: inherit;
+  font-family: inherit;
+  font-style:inherit;
+  font-weight:inherit;
+}
+
+#chrome_terminal #preview .ctfxdetail ul li:before {
   content: "\00BB \0020";
 }
 
-#chrome_terminal #preview .tip{
+#chrome_terminal #preview .ctfxtip{
   font-size: 16px;
-  color: #ffffff;
-  font-family: "Times New Roman", Times, serif;
-  text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F, 0 0 0.2em #87F;
+  color: inherit;
+  font-family: inherit;
+  font-style:inherit;
+  font-weight:inherit;
+  text-shadow: #87F 0.2em 0.2em 0.2em;
+  text-inherit: 0em;
+  border: none;
 }
 
-#chrome_terminal #preview .tag{
+#chrome_terminal #preview .ctfxtag{
   font-size: 11px;
-  color: #ffffff;
-  font-family: "Times New Roman", Times, serif;
+  color: inherit;
+  font-family: inherit;
+  font-style:inherit;
+  font-weight:inherit;
   text-shadow: #bebebe 0.2em 0.2em 0.4em;
   text-indent: 3em;
+  border: none;
 }
 
-#chrome_terminal #preview .end{
+#chrome_terminal #preview .ctfxend{
   clear: both;
 }
 

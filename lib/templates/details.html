@@ -1,29 +1,29 @@
-<div id='header'>
-  <div class='title'>
+<div class='ctfxheader'>
+  <div class='ctfxtitle'>
     ${title}
   </div>
-  <div class='time'>
+  <div class='ctfxtime'>
     ${time}
   </div>
-  <div class='end'></div>
-  <div class='summary'>
+  <div class='ctfxend'></div>
+  <div class='ctfxsummary'>
     <ul>
       {for entry in summaries}
-      <li>${entry.msg} <span class='tip'>${entry.tip}</span></li>
+      <li>${entry.msg} <span class='ctfxtip'>${entry.tip}</span></li>
       {/for}
     </ul>
   </div>
 </div>
-<div id='body'>
-  <div class='detail'>
+<div class='ctfxbody'>
+  <div class='ctfxdetail'>
     <ul>
       {for entry in details}
       <li>${entry.msg} </li>
-      <div class='tag'>
+      <div class='ctfxtag'>
         ${entry.tag}
       </div>
       {forelse}
-      <li class='tip'>${emptyMsg}</li>
+      <li class='ctfxtip'>${emptyMsg}</li>
       {/for}
     </ul>
   </div>
