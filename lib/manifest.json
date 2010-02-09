@@ -3,7 +3,7 @@
   "email": "wpc0000@gmail.com",
   "years": "2003-2010",
   "name": "Chrome Terminal",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Chrome command line",
   "icons": {
     "48":"icons/icon48x48.png",
