@@ -1,18 +1,23 @@
 <!-- The Chrome Framework background Engine -->
 <html>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <!-- Load Google JS API -->
-  <script language="javascript" type="text/javascript" src="http://www.google.com/jsapi"></script>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-  <!-- Load Back Engine -->
-  <script language="javascript" type="text/javascript" src="backengine.js"></script>
+    <!-- Load Google JS API -->
+    <script language="javascript" type="text/javascript" src="http://www.google.com/jsapi"></script>
 
-  <!-- Add Extension Listener -->
-  <script language="javascript" type="text/javascript" >
-    chrome.extension.onRequest.addListener(CTEngine.listener);
-    google.chineseTranditionalDay = CTEngine.getChineseTranditionalDay();
-    console.log(google.chineseTranditionalDay);
-  </script>
+    <!-- Load Back Engine -->
+    <script language="javascript" type="text/javascript" src="backengine.js"></script>
+  </head>
+
+  <body>
+    <!-- Add Extension Listener -->
+    <script language="javascript" type="text/javascript" >
+      chrome.extension.onRequest.addListener(CTEngine.listener);
+      CTEngine.refreshData();
+      CTEngine.runService(300, CTEngine.refreshData);
+    </script>
+  </body>
 
 </html>
 
