@@ -13,8 +13,8 @@
   "background_page": "backengine.html",
   "content_scripts": [{
     "matches": ["file:///*", "http://*/*", "https://*/*" ],
-    "run_at": "document_start",
-    "all_frames": false,
+    "run_at": "document_end",
+    "all_frames": true,
     "css": [ "css/cterminal.css", "css/preview.css" ],
     "js": [ "jquery.js","trimpath-template.js","ctframework.js", "commands/google-tools.js", "commands/utils.js"]
   }],
